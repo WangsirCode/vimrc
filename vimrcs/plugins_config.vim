@@ -50,6 +50,7 @@ map <leader>f :CtrlPMRUFiles<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+let g:ctrlp_clear_cache_on_exit = 0
 
 
 """"""""""""""""""""""""""""""
@@ -74,7 +75,7 @@ set grepprg=/bin/grep\ -nH
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
+" => nerd tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
@@ -82,6 +83,11 @@ let g:NERDTreeWinSize=35
 map <c-n> :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim rainbow
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:rainbow_active = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -169,13 +175,15 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+set updatetime=500
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Taglist 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>to :TlistOpen<cr>
 nmap <leader>tc :TlistClose<cr>
+let g:Tlist_Use_Right_Window=1
 
 

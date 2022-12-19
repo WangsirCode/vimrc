@@ -27,8 +27,8 @@ map <leader>o :BufExplorer<cr>
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
-let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
+"let MRU_Max_Entries = 400
+"map <leader>f :MRU<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -42,16 +42,22 @@ nmap <c-p> <Plug>yankstack_substitute_older_paste
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_working_path_mode = 0
 
-" let g:ctrlp_map = '<c-f>'
-map <leader>p :CtrlP<cr>
-map <leader>f :CtrlPMRUFiles<cr>
+"" let g:ctrlp_map = '<c-f>'
+"map <leader>p :CtrlP<cr>
+"map <leader>f :CtrlPMRUFiles<cr>
 
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-let g:ctrlp_clear_cache_on_exit = 0
+"let g:ctrlp_max_height = 20
+"let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+"let g:ctrlp_clear_cache_on_exit = 0
 
+""""""""""""""""""""""""""""""
+" => LeaderF
+""""""""""""""""""""""""""""""
+noremap <leader>f :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>p :<C-U><C-R>=printf("Leaderf file %s", "")<CR><CR>
+noremap <leader>t :<C-U><C-R>=printf("Leaderf tag %s", "")<CR><CR>
 
 """"""""""""""""""""""""""""""
 " => ZenCoding

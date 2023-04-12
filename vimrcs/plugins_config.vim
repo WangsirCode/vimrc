@@ -193,3 +193,10 @@ nmap <leader>tc :TlistClose<cr>
 let g:Tlist_Use_Right_Window=1
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-bookmarks
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=194 ctermfg=NONE
+let g:bookmark_highlight_lines = 1
